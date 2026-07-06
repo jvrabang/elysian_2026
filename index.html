@@ -11,16 +11,51 @@
     <div class="page-brand">
       <p class="eyebrow">BSA Batch 2026 CPALE Review Donation Campaign</p>
       <h1>Help Sponsor a BSA Batch 2026 Graduate for CPALE Review</h1>
-      <p class="lead">A donation campaign by BSA alumni and batch coordinators to help deserving graduates prepare for the CPA Licensure Examination.</p>
+      <p class="lead">A donation campaign by BSA alumni to help deserving graduates prepare for the CPA Licensure Examination.</p>
 
-      <div class="hero-graphic" aria-hidden="true">
-        <div class="hero-graphic__orb hero-graphic__orb--blue"></div>
-        <div class="hero-graphic__orb hero-graphic__orb--green"></div>
-        <div class="hero-graphic__orb hero-graphic__orb--gold"></div>
-        <div class="hero-graphic__panel">
+      <div class="hero-graphic campaign-graphic" aria-hidden="true">
+        <svg class="campaign-graphic__art" viewBox="0 0 760 330" focusable="false">
+          <defs>
+            <linearGradient id="heroBlue" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#0f44a2" />
+              <stop offset="100%" stop-color="#2d6ed1" />
+            </linearGradient>
+            <linearGradient id="heroGreen" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#0f7149" />
+              <stop offset="100%" stop-color="#22a06d" />
+            </linearGradient>
+            <linearGradient id="heroGold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#ffb300" />
+              <stop offset="100%" stop-color="#ffd15c" />
+            </linearGradient>
+          </defs>
+          <path class="campaign-graphic__path" d="M74 240 C180 128 244 263 346 156 S536 70 672 146" />
+          <g class="campaign-graphic__paper">
+            <rect x="66" y="84" width="168" height="194" rx="22" />
+            <path d="M94 130h98M94 166h116M94 202h82" />
+            <rect x="94" y="226" width="86" height="18" rx="9" />
+          </g>
+          <g class="campaign-graphic__student">
+            <rect x="292" y="52" width="204" height="226" rx="28" />
+            <path class="campaign-graphic__cap" d="M332 112l62-30 62 30-62 28-62-28z" />
+            <path class="campaign-graphic__gown" d="M350 128v52c0 26 20 48 44 48s44-22 44-48v-52" />
+            <circle cx="394" cy="164" r="38" />
+            <path class="campaign-graphic__book" d="M346 242h96" />
+          </g>
+          <g class="campaign-graphic__badge">
+            <circle cx="506" cy="248" r="46" />
+            <path d="M486 248l14 15 28-34" />
+          </g>
+          <g class="campaign-graphic__fund">
+            <rect x="548" y="98" width="136" height="150" rx="24" />
+            <path d="M580 142h70M580 172h48M580 202h78" />
+            <rect x="580" y="222" width="56" height="14" rx="7" />
+          </g>
+        </svg>
+        <div class="campaign-graphic__stats">
           <span class="panel-label">Campaign impact</span>
-          <strong>1 scholar</strong>
-          <small>review support goal</small>
+          <strong data-summary-hero-funded>13% funded</strong>
+          <small>supporting CPALE review fees</small>
         </div>
       </div>
     </div>
@@ -34,12 +69,34 @@
 
   <main class="page-content">
     <section class="info-card">
-      <p>This campaign aims to raise funds to sponsor one or more graduates from BSA Batch 2026, The Elysians, for their CPALE review. The main coverage is the review fee. Depending on the total donations collected, the campaign may sponsor additional graduates or extend support to other review-related expenses.</p>
+      <p>This campaign aims to raise funds to sponsor one or more graduates from BSA Batch 2026, for their CPALE review. The main coverage is the review fee. Depending on the total donations collected, the campaign may sponsor additional graduates or extend support to other review-related expenses.</p>
       <p>Based on publicly available 2026 CPALE review cost guides in the Philippines, review center fees commonly range from around ₱6,000 to ₱16,000+, while broader CPALE preparation costs can be higher depending on format, materials, and inclusions. For this campaign, the practical target is to help cover a review fee of around ₱10,000 to ₱15,000 per sponsored applicant.</p>
       <p><em>Actual sponsorship amount and coverage will depend on total funds raised, selected review center, and the final assessment of the selection committee.</em></p>
     </section>
 
-    <section class="section-card donation-summary">
+    <section class="impact-strip" aria-label="Campaign focus areas">
+      <article class="impact-tile impact-tile--blue">
+        <span class="impact-icon" aria-hidden="true">01</span>
+        <h2>Review fees</h2>
+        <p>Donations are focused first on CPALE review support.</p>
+      </article>
+      <article class="impact-tile impact-tile--green">
+        <span class="impact-icon" aria-hidden="true">02</span>
+        <h2>Applicant support</h2>
+        <p>Funds help selected graduates prepare with fewer barriers.</p>
+      </article>
+      <article class="impact-tile impact-tile--gold">
+        <span class="impact-icon" aria-hidden="true">03</span>
+        <h2>Transparent tracking</h2>
+        <p>Payments are monitored and reported for public accountability.</p>
+      </article>
+    </section>
+
+    <section
+      class="section-card donation-summary"
+      data-campaign-summary
+      data-summary-sheet-id="1NCDu4vf5ldidEKDF5uFNaji2lzUtTLyBfbOvtS2p-BQ"
+      data-summary-sheet-name="Summary">
       <div class="section-header">
         <span class="step-label">Donation summary</span>
         <h2>Current campaign progress</h2>
@@ -47,26 +104,26 @@
       <div class="summary-highlight">
         <div>
           <p class="summary-label">Total donations collected</p>
-          <h3>₱85,000</h3>
+          <h3 data-summary-total>₱2,000</h3>
         </div>
-        <div class="summary-pill">12 donors</div>
+        <div class="summary-pill" data-summary-donors>1 donor</div>
       </div>
 
       <div class="summary-chart" aria-label="Donation progress bars">
         <div class="summary-row">
           <span>Raised</span>
-          <div class="bar-track"><div class="bar-fill bar-fill--blue" style="width: 57%"></div></div>
-          <strong>₱85,000</strong>
+          <div class="bar-track"><div class="bar-fill bar-fill--blue" style="width: 13%" data-summary-raised-bar></div></div>
+          <strong data-summary-raised>₱2,000</strong>
         </div>
         <div class="summary-row">
           <span>Goal</span>
-          <div class="bar-track"><div class="bar-fill bar-fill--green" style="width: 100%"></div></div>
-          <strong>₱150,000</strong>
+          <div class="bar-track"><div class="bar-fill bar-fill--green" style="width: 100%" data-summary-goal-bar></div></div>
+          <strong data-summary-goal>₱15,000</strong>
         </div>
         <div class="summary-row">
           <span>Remaining</span>
-          <div class="bar-track"><div class="bar-fill bar-fill--gold" style="width: 43%"></div></div>
-          <strong>₱65,000</strong>
+          <div class="bar-track"><div class="bar-fill bar-fill--gold" style="width: 87%" data-summary-remaining-bar></div></div>
+          <strong data-summary-remaining>₱13,000</strong>
         </div>
       </div>
     </section>
@@ -88,6 +145,11 @@
         <span class="step-label">Step 1</span>
         <h2>Why are we doing this?</h2>
       </div>
+      <div class="mission-graphic" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <p>The CPA Licensure Examination is a major milestone for every Accountancy graduate. For many students, however, the journey does not end at graduation. Review fees, materials, transportation, food, and other related costs can become heavy financial barriers.</p>
       <p>This campaign is our way of helping deserving graduates from BSA Batch 2026 continue their journey toward becoming Certified Public Accountants. Through collective support, even small contributions can help ease the financial burden of review and allow selected graduates to focus on preparing for the board exam.</p>
       <p>This is not only a fundraising effort. It is a batch and alumni-led act of solidarity, encouragement, and hope for future CPAs.</p>
@@ -104,12 +166,12 @@
         <li>There is no minimum target amount required from each donor</li>
         <li>Any amount will help</li>
         <li>Possible additional coverage, depending on funds collected:</li>
-      </ul>
-      <ul>
-        <li>Additional graduate sponsorship</li>
-        <li>Review materials</li>
-        <li>Transportation or other review-related support</li>
-      </ul>
+          <ul>
+            <li>Additional graduate sponsorship</li>
+            <li>Review materials</li>
+            <li>Transportation or other review-related support</li>
+          </ul>
+        </ul>
       <p><strong>Batch sponsorship context:</strong></p>
       <ul>
         <li>2 or 3 candidates will be sponsored by the 2015 Batch</li>
@@ -119,44 +181,46 @@
       </ul>
     </section>
 
-    <section class="info-card">
-      <h2>Main sponsorship focus</h2>
-      <p><strong>Main goal:</strong> Sponsor CPALE review fees</p>
-      <p><strong>Initial focus:</strong> Help cover at least 1 applicant</p>
-      <p><strong>Potential expansion:</strong> Extend support to additional applicants if excess funds are enough</p>
-      <p><strong>Donation cut-off:</strong> July 31, 2026</p>
-    </section>
-
     <section class="section-card">
       <div class="section-header">
         <span class="step-label">Step 2</span>
         <h2>Meet the Applicants</h2>
       </div>
-      <div class="applicant-grid">
-        <article class="applicant-card">
+      <div class="applicant-carousel" data-applicant-carousel>
+        <div class="applicant-carousel__viewport" aria-live="polite">
+          <div class="applicant-grid applicant-carousel__track">
+            <article class="applicant-card is-active" data-applicant-slide>
           <h3>Blessie Toledo</h3>
           <p>Blessie comes from a humble family. Her father works as a farmer and also takes on available contractual jobs to support the family, while her mother is a housewife. Financial hardships often affected her school attendance, and there were times when she had to work to afford her educational expenses. She also experienced days when she had to skip lunch and was unable to join extracurricular activities because her family could not afford the registration fee. Today, she continues to work part-time to save for her CPA board examination review.</p>
         </article>
-        <article class="applicant-card">
+            <article class="applicant-card" data-applicant-slide hidden>
           <h3>Winna Jocelyn Dela Cruz</h3>
           <p>Winna is the eldest of three siblings. Her father is a farmer, and her mother is a housewife. She also serves as the primary caregiver of her blind grandmother, with whom she currently lives. During her third year in college, she seriously considered stopping her studies because of the responsibility of caring for her grandmother.</p>
         </article>
-        <article class="applicant-card">
+            <article class="applicant-card" data-applicant-slide hidden>
           <h3>Sherlyn Bueno</h3>
           <p>Sherlyn’s father worked as an OFW, while her mother is a housewife. Recently, her father lost his job after the building where he worked was destroyed by a fire. She is the second of three siblings and is expected to become one of the first members of the family to provide financial support. Her older sister, an architecture graduate, is still completing her apprenticeship, while her younger brother is currently a second-year engineering student.</p>
         </article>
-        <article class="applicant-card">
+            <article class="applicant-card" data-applicant-slide hidden>
           <h3>Jen Llanes</h3>
           <p>Jen’s father is a farmer, and her mother is a housewife. Passing the CPA Licensure Examination is especially important to her because she hopes to help support her family while her brother completes his studies as a graduating sanitary engineering student, who may also undergo review next year.</p>
         </article>
-        <article class="applicant-card">
+            <article class="applicant-card" data-applicant-slide hidden>
           <h3>Haizel Patubo</h3>
           <p>Haizel is a Magna Cum Laude graduate. She is the daughter of a farmer who also drives a tricycle whenever opportunities arise to supplement the family’s income. Her mother is a housewife. She hopes to ease her family’s financial burden through scholarship support for her CPALE review.</p>
         </article>
-        <article class="applicant-card">
+            <article class="applicant-card" data-applicant-slide hidden>
           <h3>KC Remular</h3>
           <p>KC comes from a family of entrepreneurs, with both of her parents managing their own business. She hopes to help ease her parents’ financial burden as she prepares for the CPA Licensure Examination.</p>
         </article>
+          </div>
+        </div>
+        <div class="applicant-carousel__controls">
+          <button class="carousel-button carousel-button--prev" type="button" aria-label="Show previous applicant" data-applicant-prev></button>
+          <p class="carousel-status"><span data-applicant-current>1</span> of <span data-applicant-total>6</span></p>
+          <button class="carousel-button carousel-button--next" type="button" aria-label="Show next applicant" data-applicant-next></button>
+        </div>
+        <div class="carousel-dots" aria-label="Applicant list" data-applicant-dots></div>
       </div>
     </section>
 

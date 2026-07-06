@@ -22,6 +22,14 @@
   </header>
 
   <main class="page-content">
+    <section class="confirmation-visual" aria-label="Confirmation checklist">
+      <div class="confirmation-visual__mark" aria-hidden="true"></div>
+      <div>
+        <h2>Keep the record complete</h2>
+        <p>Your confirmation lets the campaign match each donation with the public tracker and acknowledgement process.</p>
+      </div>
+    </section>
+
     <section class="info-card">
       <h2>Confirmation details</h2>
       <p>Please prepare the following details for your confirmation submission:</p>
@@ -35,20 +43,27 @@
       </ul>
     </section>
 
-    <section class="qr-card large-card">
-      <img src="assets/confirmation-qr.png" alt="QR code for submitting donation payment confirmation" />
-      <h3>Payment confirmation QR code</h3>
-      <p>Scan this QR code to submit or send your payment confirmation.</p>
-      <!-- Replace this placeholder image with the actual confirmation form QR code file. -->
+    <section class="form-embed-card">
+      <div class="section-header">
+        <span class="step-label">Confirmation form</span>
+        <h2>Submit your payment confirmation</h2>
+      </div>
+      <div class="google-form-frame">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeN3o8dGxbovDqVjEJQO0Gx2xRHfk-pM9S73OvbsvzzGCF-yg/viewform?embedded=true"
+          title="BSA Batch 2026 donation confirmation form"
+          loading="lazy">
+          Loading...
+        </iframe>
+      </div>
     </section>
 
     <div class="button-group">
-      <a class="primary-button" href="#">Open Payment Confirmation Form</a>
-      <!-- TODO: Replace href="#" with the actual confirmation form link. -->
+      <a class="primary-button" href="https://docs.google.com/forms/d/e/1FAIpQLSeN3o8dGxbovDqVjEJQO0Gx2xRHfk-pM9S73OvbsvzzGCF-yg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Open Payment Confirmation Form</a>
     </div>
 
     <section class="note-card">
-      <p>Donors will receive a formal acknowledgment or receipt-style confirmation if they fill out the confirmation form.</p>
+      <p>After donors complete the Google Form, payment validation will be conducted, and the public donation tracker will be updated accordingly.</p>
     </section>
 
     <div class="button-group">
