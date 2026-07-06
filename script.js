@@ -106,15 +106,18 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+const CAMPAIGN_SUMMARY_SHEET_ID = '1NCDu4vf5ldidEKDF5uFNaji2lzUtTLyBfbOvtS2p-BQ';
+const CAMPAIGN_SUMMARY_SHEET_NAME = 'Summary';
+
 function loadCampaignSummary() {
-  const summaryElement = document.querySelector('[data-campaign-summary]');
+  const summaryElement = document.querySelector('[data-campaign-summary], .donation-summary');
 
   if (!summaryElement) {
     return;
   }
 
-  const sheetId = summaryElement.dataset.summarySheetId;
-  const sheetName = summaryElement.dataset.summarySheetName || 'Summary';
+  const sheetId = summaryElement.dataset.summarySheetId || CAMPAIGN_SUMMARY_SHEET_ID;
+  const sheetName = summaryElement.dataset.summarySheetName || CAMPAIGN_SUMMARY_SHEET_NAME;
 
   if (!sheetId) {
     return;
@@ -198,14 +201,14 @@ function updateCampaignSummary(summaryElement, summary) {
   const remainingPercent = summary.goal > 0 ? clampPercent((remaining / summary.goal) * 100) : 0;
   const totalDonors = Number.isFinite(summary.totalDonors) ? summary.totalDonors : 0;
 
-  setText(summaryElement, '[data-summary-total]', formatCurrency(summary.totalDonations));
-  setText(summaryElement, '[data-summary-donors]', formatDonorCount(totalDonors));
-  setText(summaryElement, '[data-summary-raised]', formatCurrency(summary.totalDonations));
-  setText(summaryElement, '[data-summary-goal]', formatCurrency(summary.goal));
-  setText(summaryElement, '[data-summary-remaining]', formatCurrency(remaining));
-  setBarWidth(summaryElement, '[data-summary-raised-bar]', percentFunded);
-  setBarWidth(summaryElement, '[data-summary-goal-bar]', 100);
-  setBarWidth(summaryElement, '[data-summary-remaining-bar]', remainingPercent);
+  setText(summaryElement, '[data-summary-total]', formatCurrency(summary.totalDonations), '.summary-highlight h3');
+  setText(summaryElement, '[data-summary-donors]', formatDonorCount(totalDonors), '.summary-pill');
+  setText(summaryElement, '[data-summary-raised]', formatCurrency(summary.totalDonations), '.summary-row:nth-child(1) strong');
+  setText(summaryElement, '[data-summary-goal]', formatCurrency(summary.goal), '.summary-row:nth-child(2) strong');
+  setText(summaryElement, '[data-summary-remaining]', formatCurrency(remaining), '.summary-row:nth-child(3) strong');
+  setBarWidth(summaryElement, '[data-summary-raised-bar]', percentFunded, '.summary-row:nth-child(1) .bar-fill');
+  setBarWidth(summaryElement, '[data-summary-goal-bar]', 100, '.summary-row:nth-child(2) .bar-fill');
+  setBarWidth(summaryElement, '[data-summary-remaining-bar]', remainingPercent, '.summary-row:nth-child(3) .bar-fill');
   setText(document, '[data-summary-hero-funded]', formatPercent(percentFunded) + ' funded');
 }
 
@@ -275,16 +278,16 @@ function clampPercent(value) {
   return Math.min(Math.max(value, 0), 100);
 }
 
-function setText(root, selector, value) {
-  const element = root.querySelector(selector);
+function setText(root, selector, value, fallbackSelector) {
+  const element = root.querySelector(selector) || (fallbackSelector ? root.querySelector(fallbackSelector) : null);
 
   if (element) {
     element.textContent = value;
   }
 }
 
-function setBarWidth(root, selector, value) {
-  const element = root.querySelector(selector);
+function setBarWidth(root, selector, value, fallbackSelector) {
+  const element = root.querySelector(selector) || (fallbackSelector ? root.querySelector(fallbackSelector) : null);
 
   if (element) {
     element.style.width = formatPercent(value);
