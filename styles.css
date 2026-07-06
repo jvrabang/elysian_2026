@@ -229,11 +229,13 @@ a {
 .page-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  align-items: center;
+  gap: 12px;
   margin-top: 24px;
 }
 
 .page-nav a {
+  position: relative;
   padding: 11px 16px;
   border: 1px solid rgba(15, 68, 162, 0.2);
   border-radius: 8px;
@@ -241,6 +243,24 @@ a {
   color: var(--blue);
   font-weight: 800;
   box-shadow: 0 8px 22px rgba(15, 68, 162, 0.06);
+}
+
+.page-nav a:not(:last-child) {
+  margin-right: 18px;
+}
+
+.page-nav a:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -22px;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid var(--green);
+  border-right: 2px solid var(--green);
+  transform: translateY(-50%) rotate(45deg);
+  opacity: 0.9;
+  pointer-events: none;
 }
 
 .page-nav a.active,
