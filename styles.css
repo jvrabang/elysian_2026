@@ -427,6 +427,53 @@ a {
   object-fit: contain;
 }
 
+.payment-mark {
+  position: relative;
+  display: flex;
+  min-height: 240px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(15, 68, 162, 0.12);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(15, 68, 162, 0.14), rgba(15, 113, 73, 0.1)),
+    linear-gradient(90deg, rgba(255, 179, 0, 0.16) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(15, 68, 162, 0.08) 1px, transparent 1px),
+    #f8fbff;
+  background-size: auto, 22px 22px, 22px 22px, auto;
+}
+
+.payment-mark::before {
+  content: "";
+  position: absolute;
+  inset: 22px;
+  border: 2px solid rgba(255, 179, 0, 0.42);
+  border-radius: 8px;
+}
+
+.payment-mark span {
+  position: relative;
+  display: inline-flex;
+  min-height: 68px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  border: 1px solid rgba(15, 68, 162, 0.12);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 16px 32px rgba(15, 68, 162, 0.14);
+  color: var(--blue);
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.payment-mark--paypal span {
+  color: var(--blue);
+}
+
 .applicant-card {
   border-top: 4px solid var(--blue);
 }
